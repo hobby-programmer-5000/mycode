@@ -56,7 +56,7 @@ export class PeerThreadRelay extends Context.Service<
       input: PeerLinkThreadItemInput,
     ) => Effect.Effect<OrchestrationV2GetTurnItemResult, PeerLinkThreadReadError>;
   }
->()("mycode/peer/PeerThreadRelay") {}
+>()("mycode-server/peer/PeerThreadRelay") {}
 
 const decodeStreamItem = Schema.decodeUnknownOption(
   Schema.fromJsonString(Schema.toCodecJson(OrchestrationV2ThreadStreamItem)),

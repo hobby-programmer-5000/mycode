@@ -176,7 +176,7 @@ export class Workflows extends Context.Service<
      */
     readonly sweep: Effect.Effect<void>;
   }
->()("mycode/workflows/Workflows") {}
+>()("mycode-server/workflows/Workflows") {}
 
 const refuse = Effect.fn("Workflows.disabled")(function* () {
   return yield* new WorkflowInputError({

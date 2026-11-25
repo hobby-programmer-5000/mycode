@@ -16,7 +16,7 @@ export class EnvironmentAuthPolicy extends Context.Service<
   {
     readonly getDescriptor: () => Effect.Effect<ServerAuthDescriptor>;
   }
->()("mycode/auth/EnvironmentAuthPolicy") {}
+>()("mycode-server/auth/EnvironmentAuthPolicy") {}
 
 /** Authentication policy is always open access with no login gate. */
 export function resolveServerAuthPolicy(

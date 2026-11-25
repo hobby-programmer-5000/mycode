@@ -168,7 +168,7 @@ export class AuthPairingLinkRepository extends Context.Service<
       input: RevokeUnspentByProofKeyInput,
     ) => Effect.Effect<ReadonlyArray<string>, AuthPairingLinkRepositoryError>;
   }
->()("mycode/persistence/AuthPairingLinks/AuthPairingLinkRepository") {}
+>()("mycode-server/persistence/AuthPairingLinks/AuthPairingLinkRepository") {}
 
 function toPersistenceSqlOrDecodeError(
   sqlOperation: string,

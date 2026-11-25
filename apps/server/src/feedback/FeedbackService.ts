@@ -78,7 +78,7 @@ export class FeedbackService extends Context.Service<
       | FeedbackStorageError
     >;
   }
->()("mycode/feedback/FeedbackService") {}
+>()("mycode-server/feedback/FeedbackService") {}
 
 const storageError = (cause: unknown) => new FeedbackStorageError({ cause });
 

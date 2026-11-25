@@ -151,7 +151,7 @@ export class WorkspaceSearchIndex extends Context.Service<
     >;
     readonly refresh: () => Effect.Effect<void, WorkspaceSearchIndexRefreshFailed>;
   }
->()("mycode/workspace/WorkspaceSearchIndex") {}
+>()("mycode-server/workspace/WorkspaceSearchIndex") {}
 
 // Only the host separator becomes `/`: on POSIX `\` is a file name character.
 function toPosixPath(input: string, hostIsWindows: boolean): string {
@@ -1442,7 +1442,7 @@ export const layer = (key: string) => {
 };
 
 export class WorkspaceSearchIndexMap extends LayerMap.Service<WorkspaceSearchIndexMap>()(
-  "mycode/workspace/WorkspaceSearchIndexMap",
+  "mycode-server/workspace/WorkspaceSearchIndexMap",
   {
     lookup: layer,
     idleTimeToLive: WORKSPACE_INDEX_IDLE_TTL,

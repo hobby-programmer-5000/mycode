@@ -125,7 +125,7 @@ export class EnvironmentSigningKey extends Context.Service<
       readonly payload: Readonly<Record<string, unknown>>;
     }) => Effect.Effect<string, RelayJwtError>;
   }
->()("mycode/cloud/environmentKeys/EnvironmentSigningKey") {}
+>()("mycode-server/cloud/environmentKeys/EnvironmentSigningKey") {}
 
 export const layer = Layer.effect(
   EnvironmentSigningKey,

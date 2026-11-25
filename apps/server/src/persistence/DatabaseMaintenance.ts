@@ -131,7 +131,7 @@ export class DatabaseMaintenance extends Context.Service<
       DatabaseInUseError | LegacyDatabaseRemoveError | LegacyDatabaseHasUnmigratedRecordsError
     >;
   }
->()("mycode/persistence/DatabaseMaintenance") {}
+>()("mycode-server/persistence/DatabaseMaintenance") {}
 
 const isDomainError = Schema.is(Schema.Union([DatabaseMissingError, DatabaseInUseError]));
 

@@ -122,7 +122,7 @@ export class OrchestrationEventStore extends Context.Service<
       readonly filter?: (event: ApplicationStoredEvent) => boolean;
     }) => Stream.Stream<A, OrchestrationEventStoreError>;
   }
->()("mycode/persistence/OrchestrationEventStore") {}
+>()("mycode-server/persistence/OrchestrationEventStore") {}
 
 const encodeProjectIcon = Schema.encodeSync(StoredProjectIcon);
 const decodeProjectEvent = Schema.decodeUnknownEffect(ApplicationProjectEvent);

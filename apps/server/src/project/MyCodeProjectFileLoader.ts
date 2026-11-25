@@ -31,7 +31,7 @@ export class MyCodeProjectFileLoader extends Context.Service<
     /** Never fails; missing/unreadable/invalid files return none, with warnings for invalid files. */
     readonly load: (workspaceRoot: string) => Effect.Effect<Option.Option<MyCodeProjectFile>>;
   }
->()("mycode/project/MyCodeProjectFileLoader") {}
+>()("mycode-server/project/MyCodeProjectFileLoader") {}
 
 const logMyCodeProjectFileLoadError = (error: MyCodeProjectFileLoadError) =>
   Effect.logWarning(error).pipe(

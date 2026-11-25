@@ -38,7 +38,7 @@ export class CodexUsageHistory extends Context.Service<
       CodexUsageHistoryReadError
     >;
   }
->()("mycode/usage/CodexUsageHistory") {}
+>()("mycode-server/usage/CodexUsageHistory") {}
 
 const make = Effect.gen(function* () {
   const sql = yield* SqlClient.SqlClient;

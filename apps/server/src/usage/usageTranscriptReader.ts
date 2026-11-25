@@ -17,6 +17,7 @@ import * as Option from "effect/Option";
 import * as Schema from "effect/Schema";
 
 import { createTranscriptJsonReader } from "../project/AgentSessionJson.ts";
+import { loadRustNativeAddon } from "../native/rustNative.ts";
 
 export interface TranscriptFile {
   readonly path: string;
@@ -65,6 +66,10 @@ function selectUsageFields(fields: SelectedFields) {
 }
 
 function fnv1a(buffer: Buffer): number {
+  const native = loadRustNativeAddon();
+  if (native !== null) {
+    return native.fnv1aHash(buffer);
+  }
   let hash = 0x811c9dc5;
   for (let index = 0; index < buffer.length; index += 1) {
     hash ^= buffer[index]!;
@@ -83,6 +88,10 @@ export async function listTranscriptFiles(
   readonly walked: readonly string[];
   readonly failedPaths: number;
 }> {
+  const native = loadRustNativeAddon();
+  if (native !== null) {
+    return native.listTranscriptFiles(root, sinceMs, options?.fileName ?? null);
+  }
   const fileName = options?.fileName;
   let failedPaths = 0;
   let reading = 0;

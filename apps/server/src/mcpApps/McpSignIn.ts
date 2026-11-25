@@ -30,7 +30,7 @@ export class McpSignIn extends Context.Service<
       input: ProviderMcpSignInCompleteInput,
     ) => Effect.Effect<ProviderMcpSignInCompleteResult, ProviderMcpSignInError>;
   }
->()("mycode/mcpApps/McpSignIn") {}
+>()("mycode-server/mcpApps/McpSignIn") {}
 
 const isSignInError = Schema.is(ProviderMcpSignInError);
 

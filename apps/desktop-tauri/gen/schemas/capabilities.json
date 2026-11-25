@@ -1,0 +1,1 @@
+{"default":{"identifier":"default","description":"Least-privilege offline desktop capability for MyCode main window","local":true,"windows":["main"],"permissions":["core:default","dialog:default","opener:default"]}}

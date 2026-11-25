@@ -34,7 +34,7 @@ export class KeyValues extends Context.Service<
     ) => Effect.Effect<ReadonlyArray<{ readonly key: string; readonly valueJson: string }>>;
     readonly transaction: <A, E, R>(effect: Effect.Effect<A, E, R>) => Effect.Effect<A, E, R>;
   }
->()("mycode/workflows/stepServices/KeyValues") {}
+>()("mycode-server/workflows/stepServices/KeyValues") {}
 
 export type SendSignal = (
   address: SignalAddress,
@@ -80,7 +80,7 @@ export class Signals extends Context.Service<
       options?: { readonly id?: string; readonly ttl?: Duration.Input },
     ) => Effect.Effect<"delivered" | "buffered", WorkflowInputError>;
   }
->()("mycode/workflows/stepServices/Signals") {}
+>()("mycode-server/workflows/stepServices/Signals") {}
 
 export type StartRun = (
   workflow: string,
@@ -100,7 +100,7 @@ export type ListRuns = (filter: RunFilter) => Effect.Effect<ReadonlyArray<RunSum
 export class Runs extends Context.Service<
   Runs,
   { readonly start: StartRun; readonly cancel: CancelRun; readonly list: ListRuns }
->()("mycode/workflows/stepServices/Runs") {}
+>()("mycode-server/workflows/stepServices/Runs") {}
 
 export type InStep = KeyValues | Signals | Runs | WorkflowForge | StepReferences;
 
@@ -127,7 +127,7 @@ export class EngineLink extends Context.Service<
     /** The steps of each run that are running in this process right now. */
     readonly inFlight: InFlight;
   }
->()("mycode/workflows/stepServices/EngineLink") {}
+>()("mycode-server/workflows/stepServices/EngineLink") {}
 export interface InFlight {
   readonly track: <A, E, R>(
     runId: string,

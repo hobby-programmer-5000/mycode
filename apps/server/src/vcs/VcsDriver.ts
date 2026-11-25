@@ -140,4 +140,4 @@ export class VcsDriver extends Context.Service<
     ) => Effect.Effect<ReadonlyArray<string>, VcsError>;
     readonly initRepository: (input: VcsInitInput) => Effect.Effect<void, VcsError>;
   }
->()("mycode/vcs/VcsDriver") {}
+>()("mycode-server/vcs/VcsDriver") {}

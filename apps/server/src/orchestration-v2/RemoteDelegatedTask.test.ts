@@ -47,7 +47,7 @@ const adapter = {
 class Offers extends Context.Service<
   Offers,
   Ref.Ref<ReadonlyArray<ProviderContinuationRequests.ProviderContinuationRequest>>
->()("mycode/orchestration-v2/RemoteDelegatedTask.test/Offers") {}
+>()("mycode-server/orchestration-v2/RemoteDelegatedTask.test/Offers") {}
 const layerOffers = Layer.effect(
   Offers,
   Ref.make<ReadonlyArray<ProviderContinuationRequests.ProviderContinuationRequest>>([]),

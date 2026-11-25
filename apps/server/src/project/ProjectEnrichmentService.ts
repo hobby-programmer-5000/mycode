@@ -59,7 +59,7 @@ export class ProjectEnrichmentService extends Context.Service<
       Scope.Scope
     >;
   }
->()("mycode/project/ProjectEnrichmentService") {}
+>()("mycode-server/project/ProjectEnrichmentService") {}
 
 function availableValue<A, E>(cached: Option.Option<Exit.Exit<A, E>>): A | null {
   return Option.match(cached, {

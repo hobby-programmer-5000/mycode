@@ -201,7 +201,7 @@ export class IssueService extends Context.Service<
       IssueError
     >;
   }
->()("mycode/issue/IssueService") {}
+>()("mycode-server/issue/IssueService") {}
 
 const make = Effect.gen(function* () {
   const registry = yield* IssueTrackerRegistry.IssueTrackerRegistry;

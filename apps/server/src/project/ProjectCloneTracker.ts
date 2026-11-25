@@ -52,7 +52,7 @@ export class ProjectCloneTracker extends Context.Service<
     readonly get: (projectId: ProjectId) => Effect.Effect<ProjectCloneSnapshot | null>;
     readonly stream: Stream.Stream<ReadonlyArray<ProjectCloneSnapshot>>;
   }
->()("mycode/project/ProjectCloneTracker") {}
+>()("mycode-server/project/ProjectCloneTracker") {}
 
 export interface ProjectCloneHooks {
   /** Fails with `ProjectConflictError` when another project already owns the destination. */

@@ -1,0 +1,16 @@
+[package]
+name = "mycode-native"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+mycode-core = { path = "../mycode-core" }
+napi = { version = "3", default-features = false, features = ["napi8", "serde-json"] }
+napi-derive = "3"
+
+[build-dependencies]
+napi-build = "2"

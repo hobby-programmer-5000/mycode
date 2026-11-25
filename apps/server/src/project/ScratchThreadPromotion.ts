@@ -42,7 +42,7 @@ export class ScratchThreadPromotion extends Context.Service<
       readonly threadId: ThreadId;
     }) => Effect.Effect<{ readonly projectId: ProjectId }, ScratchThreadPromotionError>;
   }
->()("mycode/project/ScratchThreadPromotion") {}
+>()("mycode-server/project/ScratchThreadPromotion") {}
 
 const make = Effect.gen(function* () {
   const managedFolders = yield* ManagedProjectFolders.ManagedProjectFolders;

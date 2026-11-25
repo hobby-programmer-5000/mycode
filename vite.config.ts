@@ -153,6 +153,10 @@ export default defineConfig({
   fmt: {
     ignorePatterns: [
       ".repos/**",
+      "target/**",
+      "apps/desktop-tauri/target/**",
+      "apps/desktop-tauri/dist-web/**",
+      "apps/server/native/**",
       "infra/task-cache/vendor/**",
       // Macroscope requires one glob per line; Markdown formatting corrupts it.
       ".macroscope/ignore.md",
@@ -182,6 +186,12 @@ export default defineConfig({
     ignorePatterns: [
       ".repos",
       ".repos/**",
+      "target",
+      "target/**",
+      "apps/desktop-tauri/target",
+      "apps/desktop-tauri/target/**",
+      "apps/server/native",
+      "apps/server/native/**",
       "infra/task-cache/vendor/**",
       "dist",
       "dist-electron",

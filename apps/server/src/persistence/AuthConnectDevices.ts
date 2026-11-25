@@ -51,7 +51,7 @@ export class AuthConnectDeviceRepository extends Context.Service<
       keepProofKeyThumbprint: string | null,
     ) => Effect.Effect<number, AuthPairingLinkRepositoryError>;
   }
->()("mycode/persistence/AuthConnectDevices/AuthConnectDeviceRepository") {}
+>()("mycode-server/persistence/AuthConnectDevices/AuthConnectDeviceRepository") {}
 
 const sqlError = (operation: string) => (cause: unknown) =>
   new PersistenceSqlError({ operation, cause });

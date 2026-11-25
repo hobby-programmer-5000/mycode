@@ -74,7 +74,7 @@ const layerMetadata = Layer.merge(
 );
 
 class EnrichmentCompletions extends Context.Service<EnrichmentCompletions, Queue.Queue<void>>()(
-  "mycode/project/ProjectService.test/EnrichmentCompletions",
+  "mycode-server/project/ProjectService.test/EnrichmentCompletions",
 ) {}
 
 const layerEnrichmentCompletions = Layer.effectContext(

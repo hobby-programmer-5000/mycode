@@ -38,7 +38,7 @@ export type {
 } from "@mycode/provider-core/server/textGeneration";
 
 export class TextGeneration extends Context.Service<TextGeneration, ProviderTextGeneration>()(
-  "mycode/textGeneration/TextGeneration",
+  "mycode-server/textGeneration/TextGeneration",
 ) {}
 
 type TextGenerationOp =

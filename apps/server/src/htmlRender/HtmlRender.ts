@@ -177,7 +177,7 @@ export class HtmlRender extends Context.Service<
       | HeadlessChrome.HtmlRenderBrowserError
     >;
   }
->()("mycode/htmlRender/HtmlRender") {}
+>()("mycode-server/htmlRender/HtmlRender") {}
 
 const IMAGE_MIME_TYPES: Record<string, string> = {
   png: "image/png",

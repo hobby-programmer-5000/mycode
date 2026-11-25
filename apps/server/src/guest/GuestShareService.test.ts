@@ -122,7 +122,7 @@ const layerCleanup = Layer.effect(
 class RecordedAnalytics extends Context.Service<
   RecordedAnalytics,
   Ref.Ref<ReadonlyArray<Readonly<Record<string, unknown>>>>
->()("mycode/guest/GuestShareService.test/RecordedAnalytics") {}
+>()("mycode-server/guest/GuestShareService.test/RecordedAnalytics") {}
 const layerAnalytics = Layer.effectContext(
   Effect.gen(function* () {
     const recorded = yield* Ref.make<ReadonlyArray<Readonly<Record<string, unknown>>>>([]);

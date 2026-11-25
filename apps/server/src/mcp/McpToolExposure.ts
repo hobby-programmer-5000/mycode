@@ -30,7 +30,7 @@ export class McpToolExposure extends Context.Service<
     ) => Effect.Effect<ReadonlyArray<ListedTool>>;
     readonly isListed: (providerSessionId: string, tool: string) => boolean;
   }
->()("mycode/mcp/McpToolExposure") {}
+>()("mycode-server/mcp/McpToolExposure") {}
 
 const score = (tool: ListedTool, terms: ReadonlyArray<string>) => {
   const name = tool.name.toLowerCase();

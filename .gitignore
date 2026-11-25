@@ -40,6 +40,11 @@ artifacts/mobile-e2e/
 artifacts/mobile-behavior/
 scripts/.e2e/
 .github/pr-assets/
+/target/
+apps/desktop-tauri/target/
+apps/desktop-tauri/dist-web/
+apps/server/native/*.node
+apps/server/native/*.pdb
 native/**/target/
 node_modules/
 .alchemy/

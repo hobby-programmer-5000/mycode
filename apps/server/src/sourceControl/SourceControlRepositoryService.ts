@@ -61,7 +61,7 @@ export class SourceControlRepositoryService extends Context.Service<
       input: SourceControlPublishRepositoryInput,
     ) => Effect.Effect<SourceControlPublishRepositoryResult, SourceControlRepositoryError>;
   }
->()("mycode/sourceControl/SourceControlRepositoryService") {}
+>()("mycode-server/sourceControl/SourceControlRepositoryService") {}
 
 export interface SourceControlPreparedClone {
   readonly destinationPath: string;

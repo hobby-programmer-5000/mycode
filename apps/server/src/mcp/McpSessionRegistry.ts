@@ -40,7 +40,7 @@ export interface McpSessionRegistryShape {
 export class McpSessionRegistry extends Context.Service<
   McpSessionRegistry,
   McpSessionRegistryShape
->()("mycode/mcp/McpSessionRegistry") {}
+>()("mycode-server/mcp/McpSessionRegistry") {}
 
 interface AliveMark {
   readonly wallMs: number;

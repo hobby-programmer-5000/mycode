@@ -267,7 +267,7 @@ export class ThreadLaunchService extends Context.Service<
     >;
     readonly prepareRun: (input: ThreadLaunchPreparationInput) => Effect.Effect<void>;
   }
->()("mycode/orchestration-v2/ThreadLaunchService") {}
+>()("mycode-server/orchestration-v2/ThreadLaunchService") {}
 
 const isThreadLaunchError = Schema.is(ThreadLaunchError);
 

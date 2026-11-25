@@ -131,7 +131,7 @@ export class ProjectSetupScriptRunner extends Context.Service<
       input: ProjectSetupScriptRunnerInput,
     ) => Effect.Effect<ProjectSetupScriptRunnerResult, ProjectSetupScriptRunnerError>;
   }
->()("mycode/project/ProjectSetupScriptRunner") {}
+>()("mycode-server/project/ProjectSetupScriptRunner") {}
 
 /** @public */
 // Random per-run tokens prevent script output from spoofing completion.

@@ -130,7 +130,7 @@ export class ManagedProjectFolders extends Context.Service<
       NamedProjectError
     >;
   }
->()("mycode/project/ManagedProjectFolders") {}
+>()("mycode-server/project/ManagedProjectFolders") {}
 
 const folderWords = (text: string) =>
   foldLatinDiacritics(text)

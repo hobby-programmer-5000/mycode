@@ -22,7 +22,7 @@ export class AnalyticsService extends Context.Service<
       observedBy: "server" | "client",
     ) => Effect.Effect<void>;
   }
->()("mycode/telemetry/AnalyticsService") {}
+>()("mycode-server/telemetry/AnalyticsService") {}
 
 /** @public */
 export const make = Effect.succeed(

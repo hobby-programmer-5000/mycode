@@ -62,7 +62,7 @@ export class RunFinalizationService extends Context.Service<
       readonly scopeId: CheckpointScopeId;
     }) => Effect.Effect<void, RunFinalizationError>;
   }
->()("mycode/orchestration-v2/RunFinalizationService") {}
+>()("mycode-server/orchestration-v2/RunFinalizationService") {}
 
 const make = Effect.gen(function* () {
   const checkpointCapture = yield* CheckpointCapture.CheckpointCaptureServiceV2;

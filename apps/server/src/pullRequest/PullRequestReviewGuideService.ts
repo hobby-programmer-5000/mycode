@@ -54,7 +54,7 @@ export class PullRequestReviewGuideService extends Context.Service<
       PullRequestService.PullRequestError
     >;
   }
->()("mycode/pullRequest/PullRequestReviewGuideService") {}
+>()("mycode-server/pullRequest/PullRequestReviewGuideService") {}
 
 const keyString = (key: ThreadPullRequestKey) => `${key.host}/${key.repository}#${key.number}`;
 

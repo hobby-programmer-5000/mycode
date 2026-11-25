@@ -22,7 +22,7 @@ export class LayoutCommandApprovalWrites extends Context.Service<
       readonly command: string | null;
     }) => Effect.Effect<void, TaskFolderError>;
   }
->()("mycode/workspace/LayoutCommandApprovalWrites") {}
+>()("mycode-server/workspace/LayoutCommandApprovalWrites") {}
 
 const make = Effect.gen(function* () {
   const sql = yield* SqlClient.SqlClient;

@@ -43,7 +43,7 @@ export class ProviderInstanceRegistry extends Context.Service<
     readonly streamChanges: Stream.Stream<void>;
     readonly subscribeChanges: Effect.Effect<PubSub.Subscription<void>, never, Scope.Scope>;
   }
->()("mycode/provider/ProviderInstanceRegistry") {}
+>()("mycode-server/provider/ProviderInstanceRegistry") {}
 
 interface InstanceSecrets {
   readonly environment: ResolvedProviderInstanceEnvironment;

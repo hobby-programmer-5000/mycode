@@ -86,7 +86,7 @@ export class ProviderRuntimeRecoveryService extends Context.Service<
     readonly prepareForShutdown: Effect.Effect<void, ProviderRuntimeRecoveryError>;
     readonly recover: Effect.Effect<ProviderRuntimeRecoverySummary, ProviderRuntimeRecoveryError>;
   }
->()("mycode/orchestration-v2/ProviderRuntimeRecoveryService") {}
+>()("mycode-server/orchestration-v2/ProviderRuntimeRecoveryService") {}
 
 function nonterminalRuns(projection: ProjectionStore.ProjectionRuntimeRecoveryState) {
   return projection.runs.filter((run) => {

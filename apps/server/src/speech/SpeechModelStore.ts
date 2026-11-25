@@ -66,7 +66,7 @@ export class SpeechModelStore extends Context.Service<
     /** Removes MyCode's file or link; a linked file itself is left in place. */
     readonly remove: (model: ModelFile) => Effect.Effect<void, PlatformError>;
   }
->()("mycode/speech/SpeechModelStore") {}
+>()("mycode-server/speech/SpeechModelStore") {}
 
 const PARTIAL_FILENAME =
   /\.gguf\.[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}\.part$/i;

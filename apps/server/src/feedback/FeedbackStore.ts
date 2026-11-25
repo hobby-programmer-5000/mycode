@@ -77,7 +77,7 @@ export class FeedbackStore extends Context.Service<
       input: AgentFeedbackAnswerInput,
     ) => Effect.Effect<void, AgentFeedbackRequestError>;
   }
->()("mycode/feedback/FeedbackStore") {}
+>()("mycode-server/feedback/FeedbackStore") {}
 
 const storageError = (cause: unknown) => new FeedbackStorageError({ cause });
 const TraceJson = Schema.NullOr(Schema.fromJsonString(FeedbackTrace));

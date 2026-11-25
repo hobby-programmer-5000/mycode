@@ -31,7 +31,7 @@ export class CloudSpeech extends Context.Service<
       model?: string | undefined,
     ) => Effect.Effect<string, CloudSpeechError | SpeechInvalidAudioError | ServerSettingsError>;
   }
->()("mycode/speech/CloudSpeech") {}
+>()("mycode-server/speech/CloudSpeech") {}
 
 export const layer = Layer.effect(
   CloudSpeech,

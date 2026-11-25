@@ -288,7 +288,7 @@ export class ThreadSettlementServiceV2 extends Context.Service<
     readonly start: () => Effect.Effect<void, never, Scope.Scope>;
     readonly drain: Effect.Effect<void>;
   }
->()("mycode/orchestration-v2/ThreadSettlementService/ThreadSettlementServiceV2") {}
+>()("mycode-server/orchestration-v2/ThreadSettlementService/ThreadSettlementServiceV2") {}
 
 function autoSettlementConfigured(settings: import("@mycode/contracts").ServerSettings): boolean {
   if (settings.sidebarAutoSettleOnMerge || settings.sidebarAutoSettleAfterDays !== null) {

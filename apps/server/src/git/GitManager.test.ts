@@ -225,7 +225,7 @@ function runGit(
 class GitFixtureTemplates extends Context.Service<
   GitFixtureTemplates,
   { readonly repo: string; readonly bareRemote: string }
->()("mycode/git/GitManager.test/GitFixtureTemplates") {}
+>()("mycode-server/git/GitManager.test/GitFixtureTemplates") {}
 
 const layerGitFixtureTemplates = Layer.effect(
   GitFixtureTemplates,

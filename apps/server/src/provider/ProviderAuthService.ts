@@ -70,7 +70,7 @@ export class ProviderAuthService extends Context.Service<
       },
     ) => Effect.Effect<boolean, ProviderSetupError>;
   }
->()("mycode/provider/ProviderAuthService") {}
+>()("mycode-server/provider/ProviderAuthService") {}
 
 export const makeProviderAuthService = Effect.gen(function* () {
   const registry = yield* ProviderInstanceRegistry.ProviderInstanceRegistry;

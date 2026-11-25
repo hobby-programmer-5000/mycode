@@ -26,7 +26,7 @@ export class ServerLifecycleEvents extends Context.Service<
     /** Completes once the first ready event is published. */
     readonly awaitReady: Effect.Effect<void>;
   }
->()("mycode/serverLifecycleEvents") {}
+>()("mycode-server/serverLifecycleEvents") {}
 
 const make = Effect.gen(function* () {
   const pubsub = yield* PubSub.unbounded<ServerLifecycleStreamEvent>();

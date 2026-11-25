@@ -38,7 +38,7 @@ export class DesktopUpdateMarker extends Context.Service<
      */
     readonly remainingWait: (markerFile: string) => Effect.Effect<Option.Option<number>>;
   }
->()("mycode/desktopUpdate/DesktopUpdateMarker") {}
+>()("mycode-server/desktopUpdate/DesktopUpdateMarker") {}
 
 const make = Effect.gen(function* () {
   const fileSystem = yield* FileSystem.FileSystem;

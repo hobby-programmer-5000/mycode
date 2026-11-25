@@ -21,7 +21,7 @@ export class OtlpEndpointCheck extends Context.Service<
   {
     readonly check: (input: OtlpEndpointCheckInput) => Effect.Effect<OtlpEndpointCheckResult>;
   }
->()("mycode/observability/OtlpEndpointCheck") {}
+>()("mycode-server/observability/OtlpEndpointCheck") {}
 
 const emptyExport = (
   serialization: OtlpSerialization.OtlpSerialization["Service"],

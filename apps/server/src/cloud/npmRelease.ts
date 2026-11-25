@@ -14,7 +14,7 @@ export class NpmRelease extends Context.Service<
       input: ServerNpmReleaseInput,
     ) => Effect.Effect<ServerNpmRelease | null, ServerNpmReleaseError>;
   }
->()("mycode/cloud/npmRelease") {}
+>()("mycode-server/cloud/npmRelease") {}
 
 /** External npm registry phone-home checks are disabled. */
 export const make = Effect.fn("NpmRelease.make")(() =>
