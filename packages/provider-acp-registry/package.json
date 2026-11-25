@@ -1,0 +1,51 @@
+{
+  "name": "@mycode/provider-acp-registry",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./client": {
+      "types": "./src/client.ts",
+      "import": "./src/client.ts"
+    },
+    "./settings": {
+      "types": "./src/settings.ts",
+      "import": "./src/settings.ts"
+    },
+    "./server": {
+      "types": "./src/server.ts",
+      "import": "./src/server.ts"
+    },
+    "./testing": {
+      "types": "./src/testing.ts",
+      "import": "./src/testing.ts"
+    },
+    "./server/AcpRegistrySupport": {
+      "types": "./src/server/AcpRegistrySupport.ts",
+      "import": "./src/server/AcpRegistrySupport.ts"
+    },
+    "./server/AcpRegistryRuntimeCoordinator": {
+      "types": "./src/server/AcpRegistryRuntimeCoordinator.ts",
+      "import": "./src/server/AcpRegistryRuntimeCoordinator.ts"
+    }
+  },
+  "scripts": {
+    "typecheck": "effect-tsgo tsrs --noEmit",
+    "test": "vp test run --config ../../vite.config.ts --dir ."
+  },
+  "dependencies": {
+    "@noble/hashes": "catalog:",
+    "@mycode/contracts": "workspace:*",
+    "@mycode/provider-acp": "workspace:*",
+    "@mycode/provider-core": "workspace:*",
+    "@mycode/shared": "workspace:*",
+    "effect": "catalog:"
+  },
+  "devDependencies": {
+    "@effect/platform-node": "catalog:",
+    "@effect/vitest": "catalog:",
+    "@mycode/provider-testing": "workspace:*",
+    "@types/node": "catalog:",
+    "effect-acp": "workspace:*",
+    "vite-plus": "catalog:"
+  }
+}

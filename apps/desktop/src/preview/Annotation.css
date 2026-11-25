@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--mycode-font-sans);
+  --font-mono: var(--mycode-font-mono);
+  --color-background: var(--mycode-background);
+  --color-foreground: var(--mycode-foreground);
+  --color-popover: var(--mycode-popover);
+  --color-popover-foreground: var(--mycode-popover-foreground);
+  --color-primary: var(--mycode-primary);
+  --color-primary-foreground: var(--mycode-primary-foreground);
+  --color-muted: var(--mycode-muted);
+  --color-muted-foreground: var(--mycode-muted-foreground);
+  --color-accent: var(--mycode-accent);
+  --color-accent-foreground: var(--mycode-accent-foreground);
+  --color-border: var(--mycode-border);
+  --color-input: var(--mycode-input);
+  --color-ring: var(--mycode-ring);
+  --radius-sm: calc(var(--mycode-radius) - 4px);
+  --radius-md: calc(var(--mycode-radius) - 2px);
+  --radius-lg: var(--mycode-radius);
+  --radius-xl: calc(var(--mycode-radius) + 4px);
+  --radius-2xl: calc(var(--mycode-radius) + 8px);
+}
+
+:host {
+  --mycode-font-sans:
+    "DM Sans Variable", "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui,
+    sans-serif;
+  --mycode-font-mono:
+    "SF Mono", "SFMono-Regular", "JetBrains Mono", Consolas, "Liberation Mono", Menlo, monospace;
+  --mycode-radius: 0.625rem;
+  --mycode-background: white;
+  --mycode-foreground: oklch(0.269 0 0);
+  --mycode-popover: white;
+  --mycode-popover-foreground: oklch(0.269 0 0);
+  --mycode-primary: oklch(0.488 0.217 264);
+  --mycode-primary-foreground: white;
+  --mycode-destructive: oklch(0.577 0.245 27.325);
+  --mycode-muted: rgb(0 0 0 / 4%);
+  --mycode-muted-foreground: oklch(0.556 0 0);
+  --mycode-accent: rgb(0 0 0 / 4%);
+  --mycode-accent-foreground: oklch(0.269 0 0);
+  --mycode-border: rgb(0 0 0 / 8%);
+  --mycode-input: rgb(0 0 0 / 10%);
+  --mycode-ring: oklch(0.488 0.217 264);
+  color: var(--mycode-foreground);
+  font-family: var(--mycode-font-sans);
+}
+
+* {
+  box-sizing: border-box;
+  border-color: var(--mycode-border);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--mycode-ring) 72%, transparent);
+  outline-offset: -2px;
+}
+
+/* Utility display classes must not override the native hidden state. */
+[hidden] {
+  display: none !important;
+}

@@ -1,0 +1,25 @@
+{
+  "name": "@mycode/source-control-definitions",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./registry": {
+      "types": "./src/registry.ts",
+      "import": "./src/registry.ts"
+    }
+  },
+  "scripts": {
+    "typecheck": "effect-tsgo tsrs --noEmit"
+  },
+  "dependencies": {
+    "@mycode/source-control-azure-devops": "workspace:*",
+    "@mycode/source-control-bitbucket": "workspace:*",
+    "@mycode/source-control-core": "workspace:*",
+    "@mycode/source-control-cursor-origin": "workspace:*",
+    "@mycode/source-control-forgejo": "workspace:*",
+    "@mycode/source-control-gitcafe": "workspace:*",
+    "@mycode/source-control-github": "workspace:*",
+    "@mycode/source-control-gitlab": "workspace:*",
+    "@mycode/source-control-tanstack-source": "workspace:*"
+  }
+}
